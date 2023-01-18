@@ -18,16 +18,20 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+tbody,
+button {
 	font-family: var(--font-primary);
+}
+
+label,
+input,
+#error {
+	font-family: var(--font-secondary);
 }
 
 .bg-light {
 	background-color: var(--light);
-}
-
-.btn-warning {
-	font-family: var(--font-primary);
 }
 
 .odd {
