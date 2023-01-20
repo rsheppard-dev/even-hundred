@@ -16,7 +16,7 @@ const getValues = (e: Event): void => {
 
 	// check values entered by user are valid numbers
 	if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
-		// call generateNumbers
+		// call generateNumbers function with input values
 		const numbers = generateNumbers(startValue, endValue);
 
 		// call displayNumbers function
@@ -48,14 +48,9 @@ const displayNumbers = (numbers: number[]): void => {
 	// loop through all the numbers
 	for (let i = 0; i < numbers.length; i++) {
 		const number = numbers[i];
-		let className: string;
 
 		// check if current number is even or odd and assign correct class
-		if (number % 2 === 0) {
-			className = 'even';
-		} else {
-			className = 'odd';
-		}
+		const className = number % 2 === 0 ? 'even' : 'odd';
 
 		// update template rows
 		templateRows += `<tr><td class="${className}">${number}<td></tr>`;
