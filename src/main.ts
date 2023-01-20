@@ -43,6 +43,11 @@ const generateNumbers = (startValue: number, endValue: number): number[] => {
 
 // function to display number range
 const displayNumbers = (numbers: number[]): void => {
+	// get table body from html document
+	const tableBody = document.getElementById(
+		'results'
+	) as HTMLTableSectionElement;
+
 	let templateRows = '';
 
 	// loop through all the numbers
@@ -57,7 +62,7 @@ const displayNumbers = (numbers: number[]): void => {
 	}
 
 	// update html in table body
-	document.getElementById('results')!.innerHTML = templateRows;
+	tableBody.innerHTML = templateRows;
 };
 
 // get button element
