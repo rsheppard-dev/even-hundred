@@ -1,3 +1,5 @@
+import './style.css';
+
 // function to get values from user interface
 const getValues = (e: Event): void => {
 	// prevent default form behaviour (page refresh)
