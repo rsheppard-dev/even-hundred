@@ -82,6 +82,7 @@ const handleError = (message?: string): void => {
 		errorBox.classList.remove('d-none');
 	} else if (!errorBox.classList.contains('d-none')) {
 		// else remove error box if one exists
+		errorBox.innerText = '';
 		errorBox.classList.add('d-none');
 	}
 };
